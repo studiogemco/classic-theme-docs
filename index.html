@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Studio Gem — Classic Theme Installation</title>
+    <meta name="description" content="Studio Gem classic theme installation instructions.">
+    <meta name="author" content="Studio Gem">
+
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="top"></div>
+
+<header>
+    <img class="site-branding" src="studio-gem.png" alt="Studio Gem">
+    <h1>Studio Gem — Classic Theme Installation</h1>
+</header>
+
+<main class="content">
+
+    <section id="toc">
+        <h2>Table of Contents</h2>
+        <ol class="toc">
+            <li><a href="#theme">Install the Theme</a></li>
+            <li><a href="#plugins">Install Recommended Plugins</a></li>
+            <li><a href="#import">Import Demo Content</a></li>
+            <li><a href="#error">[ERROR] Failed to Import...</a></li>
+            <li><a href="#sample">Delete Sample Posts</a></li>
+        </ol>
+    </section>
+
+    <section id="theme">
+        <h2>Install the Theme</h2>
+        <ol>
+            <li>In your WordPress Admin sidebar, navigate to <strong>Appearance</strong> > <strong>Themes</strong>.</li>
+            <li>Click <strong>Add New Theme</strong>.</li>
+            <li>On the next page, click <strong>Upload Theme</strong>.</li>
+            <li>Click <strong>Choose File</strong>, locate your theme’s .zip file, and select it.</li>
+            <li>Click <strong>Install Now</strong>, then on the next page, click <strong>Activate</strong>.</li>
+        </ol>
+    </section>
+
+    <section id="plugins">
+        <h2>Install Recommended Plugins</h2>
+        <ol>
+            <li>You should see a message box that says “<em>The following recommended plugins are currently
+                inactive:</em>”. In
+                this box, click <strong>Begin activating plugins</strong>.
+            </li>
+            <li>On the next page, select/check all plugins. In the <strong>Bulk Actions</strong> dropdown, select
+                <strong>Install</strong>, then click <strong>Apply</strong>.
+            </li>
+            <li>On the next page, click Return to the Dashboard, or simply click Dashboard in your WordPress sidebar.
+            </li>
+        </ol>
+    </section>
+
+    <section id="import">
+        <h2>Import Demo Content</h2>
+
+        <p class="callout">
+            <strong>Please note</strong>: This theme has been retired, and as a result, the demo content is no longer
+            available. While the content will still be imported, media files such as images will not be included.
+        </p>
+
+        <ol>
+            <li>In your WordPress Admin sidebar, navigate to <strong>Appearance</strong> > <strong>Import Demo
+                Data</strong>.
+            </li>
+            <li>Click <strong>Import Demo Data</strong>.</li>
+            <li>On the next page, click <strong>Continue & Import</strong>.</li>
+            <li>Once the process is complete, you’ll see the <em>“Import Complete”</em> message.</li>
+        </ol>
+    </section>
+
+    <section id="error">
+        <h2>[ERROR] Failed to import … (Media)</h2>
+        <p>
+            Since this theme has been retired and the demo is no longer live, you will encounter <em>[ERROR] Failed to
+            import … (Media)</em> for each image from the original demo. The missing images are the only elements
+            not included in the imported content. You can remove the sample posts and replace any broken images on your
+            pages as needed.
+        </p>
+    </section>
+
+    <section id="sample">
+        <h2>Delete Sample Posts</h2>
+        <p>
+            The sample posts were provided only to demonstrate how the theme looks with content. Instead of editing
+            them, they should be deleted.
+        </p>
+        <ol>
+            <li>In your WordPress Admin sidebar, navigate to <strong>Posts</strong> > <strong>All Posts</strong>.</li>
+            <li>In the <strong>All Categories</strong> dropdown, choose <strong>Sample Category</strong> and click
+                <strong>Filter</strong>.
+            </li>
+            <li>Check the top checkbox to select all sample posts.</li>
+            <li>From the <strong>Bulk Actions</strong> dropdown, choose <strong>Move to Trash</strong>, then click
+                <strong>Apply</strong>.
+            </li>
+        </ol>
+    </section>
+
+    <a class="to-top" href="#top" title="Go to top">Back to Top</a>
+
+</main>
+
+<footer>
+    &copy; 2019-<span id="current-year"></span> <a target="_blank" href="https://studiogem.co">Studio Gem</a>
+</footer>
+
+<script>
+    const currentYear = new Date().getFullYear();
+    document.getElementById('current-year').textContent = currentYear.toString();
+</script>
+</body>
+</html>
