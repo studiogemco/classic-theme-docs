@@ -1,0 +1,294 @@
+/* ## Webfonts
+------------------------------------------------------------ */
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/inter-v18-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    src: url('fonts/inter-v18-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/inter-v18-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    src: url('fonts/inter-v18-latin-500italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/inter-v18-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/tenor-sans-v19-latin-regular.woff2') format('woff2');
+}
+
+/* ## CSS Reset
+------------------------------------------------------------ */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body, p, ol, ul, li, div, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: block;
+}
+
+img, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ## CSS Variables
+------------------------------------------------------------ */
+
+:root {
+    --body-bg: #f7f6f5;
+    --section-bg: #fff;
+    --callout-bg: #f0ebe8;
+    --text-color: #383736;
+    --primary-accent: #796e4f;
+    --secondary-accent: #bcb6a8;
+    --border-width: 2px;
+    --border-color: #f4f1ef;
+    --footer-bg: var(--border-color);
+    --button-bg: var(--primary-accent);
+    --button-hover: var(--secondary-accent);
+}
+
+/* ## Styles
+------------------------------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--body-bg);
+    color: var(--text-color);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    margin: 1.7em 0;
+    text-wrap: pretty;
+}
+
+p, ul, ol, li {
+    line-height: 1.7;
+}
+
+a {
+    color: var(--primary-accent);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-color);
+}
+
+a, button {
+    transition: all .2s ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    text-wrap: balance;
+}
+
+ul li::marker {
+    content: "✦";
+    color: var(--secondary-accent);
+}
+
+.toc li::marker {
+    color: #bcb6a8;
+    font-weight: 500;
+}
+
+#toc h2 {
+    border-color: var(--callout-bg);
+}
+
+ol li::marker {
+    color: var(--primary-accent);
+    font-weight: 700;
+}
+
+ol, ul {
+    margin-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+ol > li,
+ul > li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.75rem;
+}
+
+ol > li:last-child,
+ul > li:last-child,
+section p:last-child {
+    margin-bottom: 0;
+}
+
+header {
+    border-bottom: var(--border-width) solid var(--callout-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.site-branding {
+    display: inline-block;
+    margin: 0 auto;
+    max-width: 70px;
+}
+
+@media (min-width: 768px) {
+    header {
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .site-branding {
+        display: inline;
+        margin: 0;
+    }
+}
+
+h1, h2 {
+    font-family: "Tenor Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
+}
+
+h2 {
+    border-bottom: var(--border-width) solid var(--border-color);
+    font-size: 1.7rem;
+    padding-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 780px;
+    padding: 0 1.5rem;
+}
+
+section {
+    background: var(--section-bg);
+    padding: 2rem 1.5rem;
+}
+
+#toc {
+    background: transparent;
+    border: 0;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .toc {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+footer {
+    border-top: var(--border-width) solid var(--callout-bg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.to-top {
+    background: var(--button-bg);
+    color: #fff;
+    display: inline-block;
+    font-weight: 500;
+    line-height: normal;
+    padding: 1rem 2rem;
+    margin: 1rem auto 3rem auto;
+    width: auto;
+}
+
+.to-top:hover {
+    background: var(--button-hover);
+    color: var(--text-color);
+}
+
+section em {
+    color: var(--primary-accent);
+    font-style: italic;
+    font-weight: 500;
+}
+
+section strong {
+    font-weight: 700;
+}
+
+.callout {
+    background: var(--callout-bg);
+    padding: 1rem;
+}
